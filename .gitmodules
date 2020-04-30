@@ -1,3 +1,6 @@
 [submodule "third-party/lmdb"]
 	path = third-party/lmdb
 	url = https://github.com/LMDB/lmdb.git
+[submodule "third-party/lmdbxx"]
+	path = third-party/lmdbxx
+	url = https://github.com/drycpp/lmdbxx.git
