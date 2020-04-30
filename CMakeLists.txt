@@ -30,14 +30,9 @@ macro(configure_msvc_runtime)
             CMAKE_C_FLAGS_MINSIZEREL
             CMAKE_C_FLAGS_RELEASE
             CMAKE_C_FLAGS_RELWITHDEBINFO
-            CMAKE_C_FLAGS_RELMONITOR
-            CMAKE_C_FLAGS_RELWALLET
             CMAKE_CXX_FLAGS_DEBUG
             CMAKE_CXX_FLAGS_MINSIZEREL
             CMAKE_CXX_FLAGS_RELEASE
-            CMAKE_CXX_FLAGS_RELMONITOR
-            CMAKE_CXX_FLAGS_RELWALLET
-            CMAKE_CXX_FLAGS_RELWITHDEBINFO
             )
         if (${MSVC_RUNTIME} STREQUAL "static")
             message(STATUS
