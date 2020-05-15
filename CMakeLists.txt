@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(lmdbxx LANGUAGES CXX)
+project(lmdbxx)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -95,12 +95,12 @@ if (IS_TOPLEVEL_PROJECT)
     add_subdirectory(tests)
 endif()
 
-
 add_library(${PROJECT_NAME}    "./lmdbexception.hpp"
                                "./lmdb.hpp"
                                "./lmdb.cpp")
 
 target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdb/libraries/liblmdb/")
 target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdbxx/")
+target_include_directories(${PROJECT_NAME} PUBLIC "./")
 
 target_link_libraries(${PROJECT_NAME} lmdb signals)
