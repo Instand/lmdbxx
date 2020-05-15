@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string_view>
 
+#include <utils.hpp>
 #include <lmdbexception.hpp>
 
 #include <signals/signals.hpp>

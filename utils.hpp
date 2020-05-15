@@ -4,6 +4,12 @@
 #include <filesystem>
 
 namespace cs {
+template <typename T>
+struct IsArray : std::false_type {};
+
+template <typename T, size_t size>
+struct IsArray<std::array<T, size>> : std::true_type {};
+
 class FileUtils {
 public:
     static bool isPathExist(const std::string& path) {
