@@ -9,7 +9,7 @@
 
 #include <lmdbexception.hpp>
 
-#include "./third-party/signals/include/signals/signals.hpp"
+#include <signals/signals.hpp>
 
 #ifndef __APPLE__
 #include <charconv>

@@ -89,6 +89,7 @@ configure_msvc_flags()
 configure_msvc_runtime()
 
 add_subdirectory(lmdb)
+add_subdirectory(third-party)
 
 if (IS_TOPLEVEL_PROJECT)
     enable_testing()
@@ -97,7 +98,8 @@ endif()
 
 add_library(${PROJECT_NAME}    "./lmdbexception.hpp"
                                "./lmdb.hpp"
-                               "./lmdb.cpp")
+                               "./lmdb.cpp"
+                               "./utils.hpp")
 
 target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdb/libraries/liblmdb/")
 target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdbxx/")
