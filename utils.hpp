@@ -1,3 +1,4 @@
+#include <array>
 #include <string>
 #include <exception>
 #include <iostream>
