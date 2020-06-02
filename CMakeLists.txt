@@ -96,13 +96,13 @@ if (IS_TOPLEVEL_PROJECT)
     add_subdirectory(tests)
 endif()
 
-add_library(${PROJECT_NAME}    "./lmdbexception.hpp"
-                               "./lmdb.hpp"
-                               "./lmdb.cpp"
-                               "./utils.hpp")
+add_library(${PROJECT_NAME} STATIC   "${CMAKE_CURRENT_SOURCE_DIR}/lmdbexception.hpp"
+                                     "${CMAKE_CURRENT_SOURCE_DIR}/lmdb.hpp"
+                                     "${CMAKE_CURRENT_SOURCE_DIR}/lmdb.cpp"
+                                     "${CMAKE_CURRENT_SOURCE_DIR}/utils.hpp")
 
-target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdb/libraries/liblmdb/")
-target_include_directories(${PROJECT_NAME} PUBLIC "./third-party/lmdbxx/")
-target_include_directories(${PROJECT_NAME} PUBLIC "./")
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/third-party/lmdb/libraries/liblmdb/")
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/third-party/lmdbxx")
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/")
 
 target_link_libraries(${PROJECT_NAME} lmdb signals)
