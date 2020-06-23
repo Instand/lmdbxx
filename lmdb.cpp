@@ -5,6 +5,8 @@ cs::Lmdb::Lmdb(const std::string& path, const unsigned int flags): path_(path), 
         env_ = environment(flags);
 
         if (!cs::FileUtils::createPathIfNoExist(path_)) {
+            isPathOk_ = false;
+
             std::cout << "Could not create path for Lmdb: " << path_ << std::endl;
         }
     }

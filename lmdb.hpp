@@ -152,6 +152,11 @@ public:
         return size() == 0;
     }
 
+    // returns path creation result
+    bool isPathOk() const {
+        return isPathOk_;
+    }
+
     /// transactions
 
     // inserts pair of key/value to database as byte stream,
@@ -475,6 +480,7 @@ private:
     std::string path_;
 
     bool isOpen_ = false;
+    bool isPathOk_ = true;
     unsigned int flags_;
     size_t increaseSize_ = DefaultIncreaseSize;
 
