@@ -7,7 +7,7 @@ Universal C++17 library wrapper of [LMDB](https://github.com/LMDB/lmdb) and [lmd
 - Easy to use
 - Signals
 - Key-Value DB Native performance
-- Mmap
+- Memory mapping
 - Data convertion to base types and containers
 
 ## Example
