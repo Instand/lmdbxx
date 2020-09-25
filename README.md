@@ -43,12 +43,12 @@ const auto dbPath = "./temppath";
 
 class Watcher {
 public slots:
-    void onInserted(const char*, size_t size) {
-        std::cout << "Key with binary size " << size << " inserted\n";
+    void onInserted(const std::string_view data) {
+        std::cout << "Key with binary size " << data.size() << " inserted\n";
     }
     
-    void onRemoved(const char*, size_t size) {
-        std::cout << "Key with binary size " << size << " removed\n";
+    void onRemoved(const std::string_view data) {
+        std::cout << "Key with binary size " << data.size() << " removed\n";
     }
 };
 
