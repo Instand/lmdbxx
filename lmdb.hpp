@@ -21,8 +21,8 @@
 
 namespace cs {
 using FlushSignal = cs::Signal<void()>;
-using CommitSignal = cs::Signal<void(const char* data, size_t size)>;
-using RemoveSignal = cs::Signal<void(const char* data, size_t size)>;
+using CommitSignal = cs::Signal<void(const std::string_view data)>;
+using RemoveSignal = cs::Signal<void(const std::string_view data)>;
 using FailureSignal = cs::Signal<void(const LmdbException& error)>;
 using IncreaseSignal = cs::Signal<void(size_t size)>;
 
@@ -177,7 +177,7 @@ public:
             dbi.put(transaction, key, value, flags);
             transaction.commit();
 
-            emit commited(keyData, keySize);
+            emit commited(std::string_view{ keyData, keySize });
         }
         catch(const lmdb::error& error) {
             raise(error);
@@ -212,7 +212,7 @@ public:
 
             if (result) {
                 transaction.commit();
-                emit removed(data, size);
+                emit removed(std::string_view{ data, size });
             }
 
             return result;
