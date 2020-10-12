@@ -1,5 +1,5 @@
 # lmdbxx
-Universal C++17 library wrapper of [LMDB](https://github.com/LMDB/lmdb) and [lmdbxx](https://github.com/drycpp/lmdbxx) offering an object-oriented resource interface with RAII semantics. Based on [signals](https://github.com/Instand/signals) library. Has easy and comprehensive API with many template methods.
+Universal C++17 library wrapper of [LMDB](https://github.com/LMDB/lmdb) and [lmdbxx](https://github.com/drycpp/lmdbxx) offering an object-oriented resource interface with RAII semantics. Based on [cs signals](https://github.com/Instand/cs) library. Has easy and comprehensive API with many template methods.
 
 ## Features
 
