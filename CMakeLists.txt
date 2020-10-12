@@ -105,4 +105,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/t
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/third-party/lmdbxx")
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/")
 
-target_link_libraries(${PROJECT_NAME} lmdb signals)
+target_link_libraries(${PROJECT_NAME} lmdb cs)
